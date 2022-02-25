@@ -31,7 +31,7 @@ app.use("/images", express.static(path.join(__dirname, "public/images")))
 app.use(express.json())
 app.use(helmet())
 app.use(morgan("common"))
-app.use(cors({origin: process.env.CLIENT_URL}))
+// app.use(cors({origin: process.env.CLIENT_URL}))
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -58,7 +58,7 @@ app.use("/api/conversation", conversationRoute)
 app.use("/api/message", messageRoute)
 
 app.get("/", (req, res) => {
-    res.send("Zeta API...")
+    res.send("Zeta API v1...")
 })
 
 app.listen(process.env.PORT || 8800 , () => {
