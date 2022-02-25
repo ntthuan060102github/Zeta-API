@@ -58,7 +58,7 @@ app.use("/api/conversation", conversationRoute)
 app.use("/api/message", messageRoute)
 
 app.get("/", (req, res) => {
-    res.send("Zeta API v1...")
+    res.send("Zeta API v2...")
 })
 
 app.use(function(req, res, next) {
