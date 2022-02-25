@@ -58,7 +58,7 @@ app.use("/api/conversation", conversationRoute)
 app.use("/api/message", messageRoute)
 
 app.get("/", (req, res) => {
-    res.send("Welcome to Zeta!")
+    res.send("Zeta API...")
 })
 
 app.listen(process.env.PORT || 8800 , () => {
